@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter  } from "@angular/core";
 import { FormControl } from "@angular/forms";
 import { Observable } from "rxjs";
 import { map, startWith } from "rxjs/operators";
@@ -10,10 +10,12 @@ import { map, startWith } from "rxjs/operators";
 })
 export class AutocompleteFieldComponent implements OnInit {
   myControl = new FormControl();
-
   filteredOptions: Observable<string[]>;
 
-  @Input() items: string[];
+  @Input() options: string[] = [];
+  @Input() placeholder: string;
+
+  @Output() content = new EventEmitter();
 
   constructor() {}
 

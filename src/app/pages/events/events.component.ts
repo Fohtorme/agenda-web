@@ -8,6 +8,8 @@ import { Component, OnInit } from "@angular/core";
 export class EventsComponent implements OnInit {
   items: string[] = ["One", "Two", "Three"];
 
+  test: any;
+
   constructor() {}
 
   ngOnInit() {}

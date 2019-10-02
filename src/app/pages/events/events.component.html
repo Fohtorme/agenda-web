@@ -1,3 +1,8 @@
 <form>
-  <autocomplete-field [items]="items"></autocomplete-field>
+  <autocomplete-field
+    placeholder="Descrição"
+    [options]="['Aniversário Fulano', 'Aniversário Ciclano', 'Baile Compasso']"
+    [value]="test"
+    (content)=
+  ></autocomplete-field>
 </form>
